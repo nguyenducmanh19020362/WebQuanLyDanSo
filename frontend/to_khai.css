@@ -1,0 +1,128 @@
+body{
+	margin: 0;
+    font-size: 18px;
+}
+
+.container {
+	padding:50px 20px 300px 30px;
+	width: 980px;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	top:0px;
+	background-image: url("../image/background.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+
+.name_form {
+	font-size: 24px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 120px;
+	font-weight: bold;
+}
+
+.dong_1,
+.dong_2,
+.dong_3,
+.dong_4 {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 40px;
+
+}
+.dong_1_1,
+.dong_2_1,
+.dong_3_1,
+.dong_4_1 {
+	flex: 1;
+}
+.dong_1_2,
+.dong_2_2,
+.dong_3_2,
+.dong_4_2 {
+	flex: 1;
+}
+.dong_1_1_lb,
+.dong_2_1_lb,
+.dong_3_1_lb,
+.dong_4_1_lb
+ {
+	width: 160px;
+	display: inline-block;
+}
+.dong_1_2_lb,
+.dong_3_2_lb,
+.dong_4_2_lb {
+	width: 160px;
+	display: inline-block;
+}
+
+.dong_1_1_ten,
+.dong_1_2_CCCD,
+.dong_2_2_date,
+.dong_3_1_ton_giao,
+.dong_3_2_hoc_van,
+.dong_4_1_nghe_nghiep,
+.dong_4_2_quoc_tich {
+	width: 300px;
+}
+
+.dong_2_1_lb_nam {
+	margin-right: 50px;
+}
+.pointer {
+	cursor: pointer;
+}
+
+
+.dong_5,
+.dong_6,
+.dong_7 {
+	margin-bottom: 40px;
+}
+.dong_5_lb,
+.dong_6_lb,
+.dong_7_lb {
+	width: 160px;
+	display: inline-block;
+}
+
+.dong_5_que_quan,
+.dong_6_thuong_tru,
+.dong_7_tam_tru {
+	width: 790px;
+}
+.dong_8 {
+	display: flex;
+	justify-content: space-between;
+}
+.dong_8 > button{
+	width: 120px;
+	height: 30px;
+	background-color: #ff9800;
+	margin-right: 20px;
+}
+.dong_8 > button:hover {
+	background-color: #ff5722;
+}
+
+
+/* :focus{outline: none;} */
+
+	
+.border {
+	border: 0; 
+	height: 25px;
+	border-bottom: 1px solid #ccc;
+}
+
+.border:focus {
+	background-color: #fbf3d6; 
+	transition: 1s;
+}
+
+
+

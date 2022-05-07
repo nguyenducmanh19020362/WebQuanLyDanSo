@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>222222222222</title>
+    <link rel="stylesheet" href="index2.css">
+    <script src="https://kit.fontawesome.com/43358f85d2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">Quản lý dân số</header>
+        <div class="top">
+            <div class="top_left">
+                <ul>
+                    <li id="trang_chu_btn">
+                        <a href="#"><i class="fas fa-home"></i>Trang chủ</a>
+                    </li>
+
+                    <li id="them_can_bo_btn">
+                        <a href="#">Thêm cán bộ</a>
+                    </li>
+                    <li id="giao_viec_btn">
+                        <a href="#">Giao việc-Mở quyền</a>
+                    </li>
+                    <li id="xoa_quyen">
+                        <a href="#">Xóa quyền</a>
+                    </li>
+                    <li id="dang_xuat_btn">
+                        Đăng xuất
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="top_right">
+                <input type="text" class="tim_kiem_input" placeholder="Tìm kiếm">
+                <button class="tim_kiem_button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div> -->
+        </div>
+        <div class="xoa_quyen hien_thi">
+            <div class="tai_khoan">
+                <div class="header_xoa_quyen">
+                    <h2>Xóa quyền</h2>
+                </div>
+                <span class="loi_tai_khoan error"></span>
+                <div class="xoa_quyen_main">
+                    <div class="">
+                        <label for="">Tên tài khoản:</label>
+                        <input type="text" class="ten_tai_khoan_xoa" placeholder="Tên tài khoản cần khóa">
+                    </div>
+                    <button class="btn_xoa_quyen">Xoá quyền</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="main ">
+            <div class="main_left">
+                <div class="chuc_nang">
+                    <ul>
+                        <li id="danh_sach_tong">
+                            <a href="#" id="a_danh_sach_tong">Danh sách</a>
+                        </li>
+                        <li id="mo_tien_do">
+                            Tiến độ
+                        </li>
+                        <li>
+                            <a href="#">Tổng hợp-Phân tích</a>
+                        </li>
+                        <li id="khai_bao_tong">
+                            <a href="#" id="a_khai_bao_tong">Khai báo</a>
+                        </li>
+                        <li>
+                            <a href="image/Screenshot (139).png" download="Tờ khai mẫu">Download tờ khai mẫu</a>
+                        </li>
+                        <li class="bao_cao_ht">
+                            <a href="#">Báo cáo hoàn thành</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_right">
+                <div class="thong_tin_chung">
+                    <div class="thong_tin_tai_khoan">
+                    <div class="thong_tin_khu_vuc">
+                        <label for="">Khu vực:</label>
+                        <input type="text" class="khu_vuc_nhan_tt" placeholder="Khu vực">
+                        <button class="timkiemkv"> OK</button>
+                        <style>
+                            div.thong_tin_khu_vuc {
+                                background-color: aliceblue;
+                                height: 30px;
+                            }
+                        </style>
+                    </div>
+                </div>            
+                <section class="main_right_table">
+                    <div class="main_right_table_container">
+                        <table class="tbl">
+                            <thead>
+                                <tr class="header2222">
+                                    <th>id
+                                        <div>id</div>
+                                    </th>
+                                    <th>Họ và tên
+                                        <div>Họ và tên</div>
+                                    </th>
+                                    <th>Ngày sinh
+                                        <div>Ngày sinh</div>
+                                    </th>
+                                    <th>Quê quán
+                                        <div>Quê quán</div>
+                                    </th>
+                                    <th>Xem chi tiết
+                                        <div>Xem chi tiết</div>
+                                    </th>
+                                    <th>Sửa
+                                        <div>Sửa</div>
+                                    </th>
+                                    <th>Xóa
+                                        <div>Xóa</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr>
+                                    <td>030201002005</td>
+                                    <td>Đặng Bá Khang</td>
+                                    <td>30/05/2001</td>
+                                    <td>Hải Dương-Gia Lộc_Thống Kênh-Đồng tái</td>
+                                    <td align="center"><a href="#" class="xem_chi_tiet"><i
+                                                class="far fa-folder-open"></i></a></i></td>
+                                    <td align="center"><a href="#" class="chinh_sua"><i class="fas fa-edit"></i></a></i>
+                                    </td>
+                                    <td align="center"><i class="far fa-trash-alt"></i></td>
+                                </tr> -->
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                </div>
+                <div class="khai_bao hien_thi">
+                    <header class="name_form">PHIẾU THU THẬP THÔNG TIN DÂN CƯ</header>
+                    <div class="body_main">
+                        <div class="dong_1">
+                            <div class="dong_1_1 border_input">
+                                <div>
+                                    <label for="ten" class="dong_1_1_lb">Họ và tên:</label>
+                                    <input type="text" id="hoten" class="dong_1_1_ten border">
+                                </div>
+                                <span id="loi_hoten"></span>
+                            </div>
+                            <div class="dong_1_2 border_input">
+                                <div>
+                                    <label for="CCCD" class="dong_1_2_lb">Số CCCD/CMND:</label>
+                                    <input type="text" id="CCCD" class="dong_1_2_CCCD border">
+                                </div>
+                                <!-- <span id="loi_CCCD"></span> -->
+                            </div>
+                        </div>
+                        <div class="dong_2">
+                            <div class="dong_2_1 border_input">
+                                <label for="gioi_tinh" class="dong_2_1_lb">Giới tính:</label>
+                                <label for="nam" class="dong_2_1_lb_nam pointer">
+                                    <input type="radio" value="Nam" name="sex" class="sex pointer">
+
+                                    Nam
+                                </label>
+                                <label for="nu" class="dong_2_1_lb_nu pointer">
+                                    <input type="radio" value="Nữ" name="sex" class="sex pointer">
+
+                                    Nữ
+                                </label>
+                            </div>
+                            <div class="dong_2_2 border_input">
+                                <div>
+                                    <label for="ngay_sinh" class="dong_2_2_lb">Ngày-tháng-năm sinh:</label>
+                                    <input type="text" id="ngay_sinh" class="dong_2_2_date border">
+                                </div>
+                                <span id="loi_ngay_sinh"></span>
+                            </div>
+                        </div>
+
+                        <div class="dong_3">
+                            <div class="dong_3_1 border_input">
+                                <label for="ton_giao" class="dong_3_1_lb">Tôn giáo:</label>
+                                <input type="text" id="ton_giao" class="dong_3_1_ton_giao border">
+                            </div>
+
+                            <div class="dong_3_2 border_input">
+                                <label for="hoc_van" class="dong_3_2_lb">Trình độ văn hóa:</label>
+                                <input type="text" id="hoc_van" class="dong_3_2_hoc_van border">
+                            </div>
+                        </div>
+
+                        <div class="dong_4">
+                            <div class="dong_4_1 border_input">
+                                <label for="nghe_nghiep" class="dong_4_1_lb">Nghề nghiệp:</label>
+                                <input type="text" id="nghe_nghiep" class="dong_4_1_nghe_nghiep border">
+
+                            </div>
+                            <!-- <div class="dong_4_2 border_input">
+                                <label for="quoc_tich" class="dong_4_2_lb">Quốc tịch:</label>
+                                <input type="text" id="quoc_tich" class="dong_4_2_quoc_tich border">
+
+                            </div> -->
+                        </div>
+
+
+                        <div class="dong_5 border_input">
+                            <div>
+                                <label for="que_quan" class="dong_5_lb">Quê quán:</label>
+                                <input type="text" id="que_quan" class="dong_5_que_quan border">
+                            </div>
+                            <span id="loi_que_quan"></span>
+                        </div>
+                        <div class="dong_6 border_input">
+                            <div>
+                                <label for="noi_khai_sinh" class="dong_6_lb">Địa chỉ thường trú:</label>
+                                <input type="text" name="noi_khai_sinh" id="noi_khai_sinh"
+                                    class="dong_6_thuong_tru border">
+                            </div>
+                            <span id="loi_noi_khai_sinh"></span>
+                        </div>
+                        <div class="dong_7 border_input">
+                            <div>
+                                <label for="noi_o_hien_tai" class="dong_7_lb">Địa chỉ tạm trú:</label>
+                                <input type="text" id="noi_o_hien_tai" class="dong_7_tam_tru border">
+                            </div>
+                            <span id="loi_noi_o_hien_tai"></span>
+                        </div>
+                        <div class="dong_8">
+                            <button id="btn_khai_bao" class="btn_khai_bao">Khai báo</button>
+                        </div>
+                        <div class="ket_qua">
+                            <span class="kb_thanh_cong hien_thi">Khai báo thành công</span>
+                            <span class="kb_that_bai hien_thi">Khai báo thất bại</span>
+                        </div>
+                    </div>
+                </div>
+
+
+<!-- tien do  //////////////////////////////////////////////// -->
+                <div class="tien_do hien_thi">
+
+                    <header class="header_tien_do">
+                        <h2>Tiến độ điều tra dân số</h2>
+                    </header>
+                    <br><br>
+                    <div>
+                        <table id="tbl_tien_do">
+                            <thead></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- <div class="cap_phat_kv hien_thi">
+            <div class="cap_phat_kv_lable">
+                <h2>Cấp mã khu vực</h2>
+
+            </div>
+            <div class="cap_phat_kv_main ">
+                <div class="cap_phat_kv_tinh">
+                    <label for="">Tỉnh:</label>
+                    <input type="text" placeholder="Tỉnh">
+                    <span></span>
+                </div>
+                <div class="cap_phat_kv_huyen">
+                    <label for="">Huyện:</label>
+                    <input type="text" placeholder="Huyện">
+                    <span></span>
+                </div>
+                <div class="cap_phat_kv_xa">
+                    <label for="">Xã:</label>
+                    <input type="text" placeholder="Xã">
+                    <span></span>
+                </div>
+                <div class="cap_phat_kv_thon">
+                    <label for="">Thôn:</label>
+                    <input type="text" placeholder="Thôn">
+                    <span></span>
+                </div>
+                <div class="bnt">
+                    <button class="btn_tao_khu_vuc">Tạo khu vực</button>
+                </div>
+            </div>
+        </div> -->
+        <div class="them_can_bo hien_thi">
+            <div class="them_can_bo_lable">
+                <h2>Thêm cán bộ</h2>
+            </div>
+            <div class="them_can_bo_main">
+                <div class="name">
+                    <label for="">Tên khu vực:</label>
+                    <input type="text" id="ma_khu_vuc" placeholder="Tên khu vực">
+                    <span id="loi_ma_khu_vuc" class="error"></span>
+                </div>
+                <div class="name">
+                    <label for="">Mã đăng nhập:</label>
+                    <input type="text" id="username" placeholder="Tên tài khoản">
+                    <span id="loi_username" class="error"></span>
+                </div>
+                <div class="pass">
+                    <label for="">Mật khẩu:</label>
+                    <input type="password" id="pass" placeholder="Mật khẩu">
+                    <span id="loi_pass" class="error"></span>
+                </div>
+                <div class="pass">
+                    <label for="">Nhập lại mật khẩu:</label>
+                    <input type="password" id="repass" placeholder="Nhập lại mật khẩu">
+                    <span id="loi_repass" class="error"></span>
+                </div>
+                <div class="bnt">
+                    <button class="btn_tao_tai_khoan">Tạo tài khoản</button>
+                </div>
+                <div class="ket_qua">
+                    <span class="them_thanh_cong hien_thi error">Thêm thành công</span>
+                    <span class="them_that_bai hien_thi error">thêm thất bại</span>
+                </div>
+            </div>
+        </div>
+        <div class="giao_viec hien_thi">
+            <div class="giao_viec_lable ">
+                <h2>Giao việc-Phân quyền</h2>
+            </div>
+            <div class="giao_viec_main">
+                <div class="thoi_gian">
+                    <div class="bat_dau">
+                        <span class="loi_tg_bat_dau error"></span>
+                        <div>
+                            <label for="">Thời gian bắt đầu:</label>
+                            <input type="text" class="tg_bat_dau" placeholder="dd-mm-yyyy">
+                        </div>
+                    </div>
+                    <div class="ket_thuc">
+                        <span class="loi_tg_ket_thuc error"></span>
+                        <div>
+                            <label for="">Thời gian kết thúc:</label>
+                            <input type="text" class="tg_ket_thuc" placeholder="dd-mm-yyyy">
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="tai_khoan">
+                    <span class="loi_tai_khoan_gv error"></span>
+                    <div>
+                        <label for="">Tên tài khoản:</label>
+                        <input type="text" class="ten_tai_khoan"
+                            placeholder="Tên tài khoản được giao và cấp quyền">
+                    </div>
+                </div>
+                <!-- <div class="quyen">
+                    <span class="loi_cap_quyen error"></span>
+                    <div>
+                        <label for="">Các quyền được dùng:</label>
+                        <select name="" class="cap_quyen">
+                            <option value="capquyen" >Cấp quyên</option>
+                            <option value="xoaquyen" >Xóa quyền</option>
+                        </select>
+                    </div>
+                </div> -->
+                <button class="giao_viec_btn_OK">OK</button>
+                <span class="them_thanh_cong hien_thi">Cấp quyền thành công</span>
+                <span class="them_that_bai hien_thi">Cấp quyền thất bại</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal hien_thi">
+        <div class="modal_overlay"></div>
+
+        <div class="modal_body">
+            <div class="modal_inner">
+                <div class="chi_tiet">
+                    <a href="#" class="chi_tiet_button_close">
+                        <i class="far fa-window-close"></i>
+                    </a>
+                    <header class="chi_tiet_header">THÔNG TIN CHI TIẾT</header>
+                    <div class="chi_tiet_container">
+                        <div class="chi_tiet_dong_1">
+                            <div class="chi_tiet_ten">
+                                <label for="ten" class="chi_tiet_dong_1_1_lb">Họ và tên:</label>
+                                <span class="ten_ct"></span>
+                            </div>
+                            <div class="chi_tiet_CCCD">
+                                <label for="CCCD" class="chi_tiet_dong_1_2_lb">Số CCCD/CMND:</label>
+                                <span class="CCCD_ct"></span>
+                            </div>
+                        </div>
+                        <div class="chi_tiet_dong_2">
+                            <div class="chi_tiet_gioi_tinh">
+                                <label for="gioi_tinh" class="chi_tiet_dong_2_1_lb">Giới tính:</label>
+                                <span class="sex_ct"></span>
+                            </div>
+                            <div class="chi_tiet_ngay_sinh">
+                                <label for="ngay_sinh" class="chi_tiet_dong_2_2_lb">Ngày/tháng/năm sinh:</label>
+                                <span class="ngay_sinh_ct"></span>
+                            </div>
+                        </div>
+
+                        <div class="chi_tiet_dong_3">
+                            <div class="chi_tiet_ton_giao">
+                                <label for="ton_giao" class="chi_tiet_dong_3_1_lb">Tôn giáo:</label>
+                                <span class="ton_giao_ct"></span>
+                            </div>
+
+                            <div class="chi_tiet_hoc_van">
+                                <label for="hoc_van" class="chi_tiet_dong_3_2_lb">Trình độ văn hóa:</label>
+                                <span class="hoc_van_ct"></span>
+                            </div>
+                        </div>
+                        <div class="chi_tiet_dong_4">
+                            <div class="chi_tiet_nghe_nghiep">
+                                <label for="" class="chi_tiet_dong_4_1_lb">Nghề nghiệp:</label>
+                                <span class="nghe_nghiep_ct"></span>
+
+                            </div>
+                        </div>
+                        <div class="chi_tiet_que_quan">
+                            <label for="que_quan" class="chi_tiet_que_quan_lb">Quê quán:</label>
+                            <span class="que_quan_ct"></span>
+                        </div>
+                        <div class="chi_tiet_thuong_tru">
+                            <label for="noi_khai_sinh" class="chi_tiet_thuong_tru_lb">Địa chỉ thường trú:</label>
+                            <span class="noi_khai_sinh_ct"></span>
+                        </div>
+                        <div class="chi_tiet_tam_tru">
+                            <label for="noi_o_hien_tai" class="chi_tiet_tam_tru_lb">Địa chỉ tạm trú:</label>
+                            <span class="noi_o_hien_tai_ct"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal_2 hien_thi">
+        <div class="modal_overlay"></div>
+
+        <div class="modal_2_body">
+            <div class="modal_2_inner">
+                <div class="sua">
+                    <a href="#" class="sua_button_close">
+                        <i class="far fa-window-close"></i>
+                    </a>
+                    <header class="sua_header">SỬA THÔNG TIN</header>
+                    <div class="sua_container">
+                        <div class="sua_dong_1">
+                            <div class="sua_ten">
+                                <div>
+                                    <label for="ten" class="sua_dong_1_1_lb">Họ và tên:</label>
+                                    <input type="text" class="sua_ten">
+                                </div>
+                                <span id="loi_hoten_sua"></span>
+                            </div>
+                            <div class="sua_CCCD">
+                                <label for="CCCD" class="sua_dong_1_2_lb">Số CCCD/CMND:</label>
+                                <input type="text" class="sua_CCCD">
+                            </div>
+                        </div>
+                        <div class="sua_dong_2">
+                            <div class="sua_gioi_tinh">
+                                <label for="gioi_tinh" class="sua_dong_2_1_lb">Giới tính:</label>
+                                <input type="text" class="sua_sex">
+                            </div>
+                            <div class="sua_ngay_sinh">
+                                <div>
+                                    <label for="ngay_sinh" class="sua_dong_2_2_lb">Ngày/tháng/năm sinh:</label>
+                                    <input type="text" class="sua_ngay_sinh">
+                                </div>
+                                <span id="loi_ngay_sinh_sua"></span>
+                            </div>
+                        </div>
+
+                        <div class="sua_dong_3">
+                            <div class="sua_ton_giao">
+                                <label for="ton_giao" class="sua_dong_3_1_lb">Tôn giáo:</label>
+                                <input type="text" class="sua_ton_giao">
+                            </div>
+
+                            <div class="sua_hoc_van">
+                                <label for="hoc_van" class="sua_dong_3_2_lb">Trình độ văn hóa:</label>
+                                <input type="text" class="sua_hoc_van">
+                            </div>
+                        </div>
+                        <div class="sua_dong_4">
+                            <div class="sua_nghe_nghiep">
+                                <label for="dan_toc" class="sua_dong_4_1_lb">Nghề nghiệp:</label>
+                                <input type="text" class="sua_nghe_nghiep">
+
+                            </div>
+                            <!-- <div class="sua_quoc_tich">
+                                <label for="quoc_tich" class="sua_dong_4_2_lb">Quốc tịch:</label>
+                                <input type="text">
+
+                            </div> -->
+                        </div>
+                        <div class="sua_que_quan">
+                            <div>
+                                <label for="que_quan" class="sua_que_quan_lb">Quê quán:</label>
+                                <input type="text" class="sua_que_quan">
+                            </div>
+                            <span id="loi_que_quan_sua"></span>
+                        </div>
+                        <div class="sua_thuong_tru">
+                            <div>
+                                <label for="noi_khai_sinh" class="sua_thuong_tru_lb">Địa chỉ thường trú:</label>
+                                <input type="text" class="sua_thuong_tru">
+                            </div>
+                            <span id="loi_thuong_tru_sua"></span>
+                        </div>
+                        <div class="sua_tam_tru">
+                            <div>
+                                <label for="noi_o_hien_tai" class="sua_tam_tru_lb">Địa chỉ tạm trú:</label>
+                                <input type="text" class="sua_tam_tru">
+                            </div>
+                            <span id="loi_tam_tru_sua"></span>
+                        </div>
+                        <button class="chinh_sua_btn">Chỉnh sửa</button>
+                        <span class="sua_thanh_cong hien_thi">Sửa thành công</span>
+                        <span class="sua_that_bai hien_thi">Sửa thất bại</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="tiendo2.js"></script>
+</body>
+
+</html>

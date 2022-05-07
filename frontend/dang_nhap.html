@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="dang_nhap.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <header>Đăng nhập</header>
+        <div class="main">
+            <div class="name">
+                <label for="">Tên tài khoản:</label>
+                <input type="text" class="tsd" placeholder="Tên tài khoản">
+            </div>
+            <div class="pass">
+                <label for="">Mật khẩu:</label>
+                <input type="password" class="mk" placeholder="Mật khẩu">
+            </div>
+            <div class="nodisplay err-submit">
+                <span class="err err-submit">Tên đăng nhập hoặc mật khẩu không đúng.</span>
+            </div>
+            <div class="bot">
+                <button class="btn_dang_nhap">Đăng Nhập</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+		
+		// Người dùng bấm nút "Đăng nhập"
+		document.querySelector("button.btn_dang_nhap").onclick = function() {
+			fetch("http://localhost:8000/api/login", {
+				method: "POST",
+				headers: {"Content-Type": "application/json"},
+				body: '{"tsd":"' + document.querySelector("input.tsd").value + 
+					'","mk":"' + document.querySelector("input.mk").value + '"}'
+			})
+			.then(resp => {
+				if (resp.status == 200) {
+					resp.json()
+					.then(ret => {
+						if (ret.status == "OK") {
+							if (ret.data == 1) {
+								document.cookie = 'Bearer ' + ret.token;
+								document.location.href = "index.html";
+							}
+							else {
+								// Sai tên đăng nhập hoặc mật khẩu
+								document.querySelector("div.err-submit").classList.remove("nodisplay");
+							}
+						} else {
+							// Xử lý lỗi HTTP
+						}
+					});
+				} else {
+					// Xử lý lỗi HTTP
+				}
+			});
+		}
+	</script>
+
+    
+    <!-- <div>
+        <section class="filter-wrapper">
+            <div class="keyword-wrapper">
+           <input type="text" id="keyword" autocomplete="off" placeholder="start typing please..." required />
+             <a href="https://iris-tips.blogspot.com/p/search.html?q=" target="_blank" id="keyword-button"><i class="fa fa-search-plus"></i></a>
+             </div>
+           <ul id="filter-select" class="filter-select no-value">
+           </ul>
+           </section>
+    </div> -->
+</body>
+
+</html>

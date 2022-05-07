@@ -1,0 +1,16 @@
+[
+	{"user": "A1"},
+	{
+		"name": "Hà Nội",
+		"Date_begin": "2021-12-20",
+		"Date_end": "2021-12-22",
+		"status": "finished"
+	},
+	{
+		"name": "Thành Phố Hồ Chí Minh",
+		"Date_begin": "2021-12-20",
+		"Date_end": "2021-12-22",
+		"status": "unfinished"
+	}
+
+]
